@@ -1,28 +1,29 @@
 package model;
 
-
-
 public class Part {
-    private final Topology type;
-    private final int count;
-    private final int startIndex;
+    TopologyType type;
+    int index;
+    int count;
 
-    public Topology getType() {
+    public Part(TopologyType type, int index, int count){
+        this.type = type;
+        this.index = index;
+        this.count = count;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public TopologyType getType() {
         return type;
+    }
+
+    public void setType(TopologyType t){
+        this.type = t;
     }
 
     public int getCount() {
         return count;
     }
-
-    public int getStartIndex() {
-        return startIndex;
-    }
-
-    public Part(Topology type, int count, int startIndex) {
-        this.type = type;
-        this.count = count;
-        this.startIndex = startIndex;
-    }
-
 }

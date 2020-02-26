@@ -1,35 +1,24 @@
 package model;
 
-import transform.Vec3D;
-
-import java.util.ArrayList;
+import transforms.Mat4;
+import transforms.Mat4Identity;
 
 public class Solid {
-    protected ArrayList<Vertex> vertexBuffer = new ArrayList<>();
-    protected ArrayList<Integer> indexBuffer = new ArrayList<>();
-    protected ArrayList<Part> partBuffer = new ArrayList<>();
+    protected Geometry geo;
+    protected Mat4 transform = new Mat4Identity();
+    protected Topology topology;
 
-    public ArrayList<Vertex> getVertexBuffer() {
-        return vertexBuffer;
+    public Topology getTopology() {
+        return topology;
+    }
+    public Geometry getGeometry() {
+        return geo;
+    }
+    public Mat4 getTransform() {
+        return transform;
     }
 
-    public void setVertexBuffer(ArrayList<Vertex> vertexBuffer) {
-        this.vertexBuffer = vertexBuffer;
-    }
-
-    public ArrayList<Integer> getIndexBuffer() {
-        return indexBuffer;
-    }
-
-    public void setIndexBuffer(ArrayList<Integer> indexBuffer) {
-        this.indexBuffer = indexBuffer;
-    }
-
-    public ArrayList<Part> getPartBuffer() {
-        return partBuffer;
-    }
-
-    public void setPartBuffer(ArrayList<Part> partBuffer) {
-        this.partBuffer = partBuffer;
+    public void setTransform(Mat4 transform) {
+        this.transform = transform;
     }
 }

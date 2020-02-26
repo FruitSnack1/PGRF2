@@ -2,7 +2,7 @@ package rasterOperation;
 
 import java.util.Optional;
 
-public class DepthBuffer implements GridBuffer<Double> {
+public class DepthBuffer implements Raster<Double> {
 
     private double[][] array;
     private final int width, height;
