@@ -18,6 +18,11 @@ public class ImageBuffer implements Raster<Color> {
     }
 
     @Override
+    public void clear() {
+
+    }
+
+    @Override
     public void setElement(int x, int y, Color color) {
         if(inBounds(x,y)){
             buffer.setRGB(x, y, color.getRGB());

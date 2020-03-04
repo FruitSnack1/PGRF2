@@ -10,9 +10,9 @@ import transforms.Point3D;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tetrahedron extends Solid {
+public class TetraHedron extends Solid {
 
-    public Tetrahedron() {
+    public TetraHedron() {
 
         List<Vertex> geolist = new ArrayList<>();
 

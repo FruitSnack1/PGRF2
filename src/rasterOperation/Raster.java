@@ -5,6 +5,7 @@ import java.util.Optional;
 public interface Raster<E> {
     int getWidth();
     int getHeight();
+    void clear();
 
     void setElement(int x, int y, E e);
     Optional<E> getElement(int x, int y);

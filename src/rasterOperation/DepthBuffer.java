@@ -24,6 +24,11 @@ public class DepthBuffer implements Raster<Double> {
     }
 
     @Override
+    public void clear() {
+
+    }
+
+    @Override
     public void setElement(int x, int y, Double value) {
         if(!inBounds(x,y))
             return;
@@ -36,4 +41,7 @@ public class DepthBuffer implements Raster<Double> {
             return Optional.empty();
         return Optional.of(array[x][y]);
     }
+
+    //TO DO
+
 }

@@ -81,4 +81,15 @@ public class Vertex implements Vectorable<Vertex> {
         return new Vec3D(p.getY(), -p.getX(), p.getZ());
     }
 
+    @Override
+    public String toString() {
+        return "Vertex{"+
+                "position " + position +
+                ", color " + color +
+                "}";
+    }
+
+    public Vertex dehomog(){
+        return mul(1/position.getW());
+    }
 }
