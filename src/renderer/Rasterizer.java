@@ -50,7 +50,7 @@ public class Rasterizer {
 
                 //Mapovani textury
                 Col color = abc.getColor();
-                vb.drawPixelZ((int) x,(int) y, 10, color);
+                vb.drawPixelZ( x, y, 10, color);
             }
         }
 

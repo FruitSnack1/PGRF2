@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a9829bd-1e37-4033-be6c-071c96413b44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Tetrahedron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/TetraHedron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rasterOperation/DepthBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rasterOperation/DepthBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rasterOperation/ImageBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rasterOperation/ImageBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rasterOperation/Raster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rasterOperation/Raster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/Rasterizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Rasterizer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,32 +15,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="418">
+              <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
               <folding>
-                <element signature="e#172#173#0" expanded="true" />
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#230#231#0" expanded="true" />
-                <element signature="e#258#259#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Color.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1687">
+              <caret line="1133" column="9" lean-forward="true" selection-start-line="1133" selection-start-column="9" selection-end-line="1133" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/transforms/Col.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1667">
+              <caret line="202" column="62" selection-start-line="202" selection-start-column="60" selection-end-line="202" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rasterOperation/DepthBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rasterOperation/ImageBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/Rasterizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="358">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#244#245#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,12 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Vertex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
+            <state relative-caret-position="1580">
               <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-              <folding>
-                <element signature="e#2404#2405#0" expanded="true" />
-                <element signature="e#2431#2432#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -88,6 +118,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Vec3D</find>
+      <find>to</find>
+      <find>from</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,13 +128,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App.java" />
         <option value="$PROJECT_DIR$/src/rasterOperation/Raster.java" />
         <option value="$PROJECT_DIR$/src/rasterOperation/ImageBuffer.java" />
         <option value="$PROJECT_DIR$/src/rasterOperation/DepthBuffer.java" />
         <option value="$PROJECT_DIR$/src/model/Vertex.java" />
-        <option value="$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java" />
         <option value="$PROJECT_DIR$/src/renderer/Rasterizer.java" />
+        <option value="$PROJECT_DIR$/src/App.java" />
+        <option value="$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java" />
       </list>
     </option>
   </component>
@@ -121,7 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,10 +189,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="renderer" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PartBuffer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PGRF2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="transforms" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -209,17 +247,18 @@
       <workItem from="1582718538694" duration="1300000" />
       <workItem from="1582786853690" duration="1414000" />
       <workItem from="1582793526232" duration="5604000" />
+      <workItem from="1583391821010" duration="2868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7018000" />
+    <option name="totallyTimeSpent" value="9886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -272,13 +311,6 @@
     <state x="2360" y="114" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582718551397" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/rasterOperation/Raster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -296,17 +328,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rasterOperation/DepthBuffer.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rasterOperation/ImageBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="1580">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -317,40 +342,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Vertex.java">
+    <entry file="file://$PROJECT_DIR$/src/renderer/Rasterizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+        <state relative-caret-position="358">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
-            <element signature="e#2404#2405#0" expanded="true" />
-            <element signature="e#2431#2432#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rasterOperation/ImageBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rasterOperation/DepthBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transforms/Col.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1667">
+          <caret line="202" column="62" selection-start-line="202" selection-start-column="60" selection-end-line="202" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1687">
+          <caret line="1133" column="9" lean-forward="true" selection-start-line="1133" selection-start-column="9" selection-end-line="1133" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/Rasterizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="418">
+          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
           </folding>
         </state>
       </provider>

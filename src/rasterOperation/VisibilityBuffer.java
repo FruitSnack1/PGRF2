@@ -27,10 +27,16 @@ public class VisibilityBuffer {
 
 
     public void drawPixel(int x, int y, Col col){
-
+        img.setElement(x,y,Color.YELLOW);
     }
 
-    public void drawPixelZ(int x, int y, int z, Col col){
+    public void drawPixelZ(double x, double y, double z, Col col){
+        depth.getElement((int)x,(int)y).ifPresent(bufferZ ->{
+            if(z > bufferZ)
+                return;
+            depth.setElement((int)x, (int)y, z);
+            img.setElement((int)x, (int)y, new Color(col.getRGB()));
+        });
 
     }
 }
