@@ -37,6 +37,9 @@ public class VisibilityBuffer {
             depth.setElement((int)x, (int)y, z);
             img.setElement((int)x, (int)y, new Color(col.getRGB()));
         });
+    }
+
+    void setBackground(){
 
     }
 }

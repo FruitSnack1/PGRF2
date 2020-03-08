@@ -9,9 +9,10 @@ import java.awt.*;
 
 public class Rasterizer {
     private final VisibilityBuffer vb;
-
-    public Rasterizer(VisibilityBuffer vb){
+    private Shader sh;
+    public Rasterizer(VisibilityBuffer vb, Shader sh){
         this.vb = vb;
+        this.sh =sh;
     }
 
     public void rasterizeTriangle(Vertex a, Vertex b, Vertex c){
@@ -49,8 +50,9 @@ public class Rasterizer {
                 double z = abc.getPosition().getZ();
 
                 //Mapovani textury
-                Col color = abc.getColor();
-                vb.drawPixelZ( x, y, 10, color);
+//                Col color = abc.getColor();
+
+                vb.drawPixelZ( x, y, 10, sh.getColor(abc));
             }
         }
 

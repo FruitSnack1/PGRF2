@@ -1,6 +1,7 @@
 package model;
 
 import transforms.Col;
+import transforms.Point2D;
 import transforms.Point3D;
 import transforms.Vec3D;
 
@@ -9,21 +10,27 @@ public class Vertex implements Vectorable<Vertex> {
     private Col color;
     private Vec3D normal;
     private double one;
+    private Point2D texture;
 
-    public Vertex(Point3D p, Col c, double o) {
+    public Vertex(Point3D p, Col c, double o, Point2D texture) {
         this.color = c;
         this.position = p;
         this.normal = computeNormal(p);
         this.one = o;
+        this.texture = texture;
     }
 
-    public Vertex(Point3D p, Col c, Vec3D n, double o) {
+    public Vertex(Point3D p, Col c, Vec3D n, double o, Point2D texture) {
         this.color = c;
         this.position = p;
         this.normal = n;
         this.one = o;
+        this.texture = texture;
     }
 
+    public Point2D getTexture() {
+        return texture;
+    }
 //    public Vertex mul( Vertex b) {
 //        // CROSS PRODUCT
 //
@@ -45,8 +52,8 @@ public class Vertex implements Vectorable<Vertex> {
         Col c = this.getColor().mul(b);
         Vec3D n = this.getNormal().mul(b);
         double o = this.getOne() * b;
-
-        return new Vertex(p, c, n, o);
+        Point2D t = this.getTexture().mul(b);
+        return new Vertex(p, c, n, o, t);
     }
 
     @Override
@@ -56,8 +63,9 @@ public class Vertex implements Vectorable<Vertex> {
         Vec3D n = this.getNormal().add(b.getNormal());
         Col c = this.getColor().add(b.getColor()).mul(0.5);
         double o = this.getOne() + b.getOne();
+        Point2D t = this.getTexture().add(new Point2D(b.getPosition().getX(), b.getPosition().getY()));
 
-        return new Vertex(p, c, n, o);
+        return new Vertex(p, c, n, o, t);
     }
 
 
