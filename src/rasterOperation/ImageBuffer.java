@@ -19,7 +19,9 @@ public class ImageBuffer implements Raster<Color> {
 
     @Override
     public void clear() {
-
+        Graphics gr = buffer.getGraphics();
+        gr.setColor(Color.GRAY);
+        gr.fillRect(0,0, getWidth(), getHeight());
     }
 
     @Override

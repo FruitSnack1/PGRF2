@@ -1,25 +1,26 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Topology {
-    protected List<Integer> indexBuffer;
-    protected List<Part> partBuffer;
+    protected ArrayList<Integer> indexBuffer = new ArrayList<>();
+    protected ArrayList<Part> partBuffer = new ArrayList<>();
 
-    public List<Integer> getIndexBuffer() {
+    public ArrayList<Integer> getIndexBuffer() {
         return indexBuffer;
     }
 
-    public void setIndexBuffer(List<Integer> indexBuffer) {
+    public void setIndexBuffer(ArrayList<Integer> indexBuffer) {
         this.indexBuffer = indexBuffer;
     }
 
-    public List<Part> getPartBuffer() {
+    public ArrayList<Part> getPartBuffer() {
         return partBuffer;
     }
 
 
-    public void setPartBuffer(List<Part> partBuffer) {
+    public void setPartBuffer(ArrayList<Part> partBuffer) {
         this.partBuffer = partBuffer;
     }
 }

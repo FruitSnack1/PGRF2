@@ -9,21 +9,24 @@ public class VisibilityBuffer {
     private ImageBuffer img;
     private DepthBuffer depth;
 
-    private int height;
+    public VisibilityBuffer(ImageBuffer img){
+        this.img = img;
+        this.depth = new DepthBuffer(getWidth(), getHeight());
+    }
+
+    public ImageBuffer getImg() {
+        return img;
+    }
 
     public int getHeight() {
-        return height;
+        return img.getHeight();
     }
 
     public int getWidth() {
-        return width;
+        return img.getWidth();
     }
 
-    private int width;
 
-    public VisibilityBuffer(ImageBuffer img){
-        this.img = img;
-    }
 
 
     public void drawPixel(int x, int y, Col col){
@@ -32,14 +35,13 @@ public class VisibilityBuffer {
 
     public void drawPixelZ(double x, double y, double z, Col col){
         depth.getElement((int)x,(int)y).ifPresent(bufferZ ->{
+
             if(z > bufferZ)
                 return;
+
             depth.setElement((int)x, (int)y, z);
             img.setElement((int)x, (int)y, new Color(col.getRGB()));
         });
     }
 
-    void setBackground(){
-
-    }
 }

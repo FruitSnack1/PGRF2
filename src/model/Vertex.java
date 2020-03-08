@@ -61,7 +61,8 @@ public class Vertex implements Vectorable<Vertex> {
 
         Point3D p = this.getPosition().add(b.getPosition());
         Vec3D n = this.getNormal().add(b.getNormal());
-        Col c = this.getColor().add(b.getColor()).mul(0.5);
+//        Col c = this.getColor().add(b.getColor()).mul(0.5);
+        Col c = this.getColor().add(b.getColor());
         double o = this.getOne() + b.getOne();
         Point2D t = this.getTexture().add(new Point2D(b.getPosition().getX(), b.getPosition().getY()));
 

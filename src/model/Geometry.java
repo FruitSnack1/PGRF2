@@ -1,11 +1,12 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Geometry {
-    protected List<Vertex> vertecies;
+    protected ArrayList<Vertex> vertecies = new ArrayList<>();
 
-    public List<Vertex> getVertecies() {
+    public ArrayList<Vertex> getVertecies() {
         return vertecies;
     }
 }

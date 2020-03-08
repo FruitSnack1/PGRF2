@@ -4,9 +4,9 @@ import transforms.Mat4;
 import transforms.Mat4Identity;
 
 public class Solid {
-    protected Geometry geo;
+    protected Geometry geo = new Geometry();
     protected Mat4 transform = new Mat4Identity();
-    protected Topology topology;
+    protected Topology topology = new Topology();
 
     public Topology getTopology() {
         return topology;
