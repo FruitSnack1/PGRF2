@@ -74,6 +74,10 @@ public class Vertex implements Vectorable<Vertex> {
         return position;
     }
 
+    public void setPosition(Point3D position){
+        this.position = position;
+    }
+
     public Col getColor() {
         return color;
     }

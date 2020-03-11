@@ -33,11 +33,15 @@ public class VisibilityBuffer {
         img.setElement(x,y,Color.YELLOW);
     }
 
+    public void clearZ(){
+        depth.clear();
+    }
+
     public void drawPixelZ(double x, double y, double z, Col col){
         depth.getElement((int)x,(int)y).ifPresent(bufferZ ->{
 
-            if(z > bufferZ)
-                return;
+//            if(z > bufferZ)
+//                return;
 
             depth.setElement((int)x, (int)y, z);
             img.setElement((int)x, (int)y, new Color(col.getRGB()));
