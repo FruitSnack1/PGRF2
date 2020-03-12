@@ -10,9 +10,14 @@ import java.awt.*;
 public class Rasterizer {
     private final VisibilityBuffer vb;
     private Shader sh;
+    private boolean wired = true;
     public Rasterizer(VisibilityBuffer vb, Shader sh){
         this.vb = vb;
         this.sh =sh;
+    }
+
+    public void toggleWired(){
+        wired = !wired;
     }
 
     public void rasterizeTriangle(Vertex a, Vertex b, Vertex c){
@@ -63,18 +68,16 @@ public class Rasterizer {
         double xC = (c.getPosition().getX()+1) * (width/2.0)-1;
         double yC = (c.getPosition().getY()+1) * (height/2.0)-1;
 
-//        System.out.println(xA);
-//        System.out.println(yA);
-//        System.out.println(xB);
-//        System.out.println(yB);
-//        System.out.println(xC);
-//        System.out.println(yC);
-//        System.out.println("----------------------");
 
         //yA < yB < yC
-
+        if (wired){
+            vb.drawLine(xA, yA, xB, yB, new Col(255,255,255));
+            vb.drawLine(xB, yB, xC, yC, new Col(255,255,255));
+            vb.drawLine(xC, yC, xA, yA, new Col(255,255,255));
+            return;
+        }
         if(xB > xA){
-            for (int y = (int)yA; y < yB; y++){
+            for (int y = (int)yA-1; y < yB; y++){
 
 
 //            System.out.println("Y : "+y);
@@ -103,7 +106,7 @@ public class Rasterizer {
                 }
             }
 
-            for (int y = (int)yB; y < yC; y++){
+            for (int y = (int)yB-1; y < yC; y++){
                 double t = (y-yC)/(yA - yC);
                 double x1 =xC*(1-t) + t*xA;
                 Vertex cb = c.mul(1-t).add(a.mul(t));
@@ -127,7 +130,7 @@ public class Rasterizer {
                 }
             }
         }else{
-            for (int y = (int)yA; y < yB; y++){
+            for (int y = (int)yA-1; y < yB; y++){
 
 
 //            System.out.println("Y : "+y);
@@ -156,7 +159,7 @@ public class Rasterizer {
                 }
             }
 
-            for (int y = (int)yB; y < yC; y++){
+            for (int y = (int)yB-1; y < yC; y++){
                 double t = (y-yC)/(yB - yC);
                 double x1 =xC*(1-t) + t*xB;
                 Vertex cb = c.mul(1-t).add(b.mul(t));
@@ -185,6 +188,21 @@ public class Rasterizer {
         //TO DO yB - yC
 
 
+    }
+
+    public void rasterizeLine(Vertex a, Vertex b){
+        a = a.dehomog();
+        b = b.dehomog();
+
+        int width = vb.getWidth();
+        int height = vb.getHeight();
+
+        double xA = (a.getPosition().getX()+1) * (width/2.0)-1;
+        double yA = (a.getPosition().getY()+1) * (height/2.0)-1;
+        double xB = (b.getPosition().getX()+1) * (width/2.0)-1;
+        double yB = (b.getPosition().getY()+1) * (height/2.0)-1;
+
+        vb.drawLine(xA, yA, xB,yB, a.getColor());
     }
 
 

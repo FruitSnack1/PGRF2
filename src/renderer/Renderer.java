@@ -6,11 +6,15 @@ import model.Vertex;
 import model.TopologyType;
 import transforms.Mat4;
 import transforms.Mat4Identity;
+import transforms.Mat4PerspRH;
+
+import java.util.ArrayList;
 
 public class Renderer {
 
     private Rasterizer raster;
     private Mat4 view;
+    private Mat4 projection;
 
     public Rasterizer getRaster() {
         return raster;
@@ -36,17 +40,20 @@ public class Renderer {
         this.projection = projection;
     }
 
-    private Mat4 projection;
 
     public Renderer(Rasterizer raster) {
         this.raster = raster;
         this.view = new Mat4Identity();
+//        this.projection = new Mat4PerspRH(1,1,1,1);
         this.projection = new Mat4Identity();
     }
 
     public void draw(Solid s) {
-        for (Vertex v: s.getGeometry().getVertecies()){
-            v.setPosition(v.getPosition().mul(s.getTransform().mul(view).mul(projection)));
+        ArrayList<Vertex> vertexes = new ArrayList<>();
+        Mat4 transform = s.getTransform().mul(view).mul(projection);
+        for (Vertex vertex: s.getGeometry().getVertecies()){
+            vertexes.add(new Vertex(vertex.getPosition().mul(transform), vertex.getColor(), vertex.getOne(),vertex.getTexture()));
+//            v.setPosition(v.getPosition().mul(s.getTransform().mul(view).mul(projection)));
         }
 
         for (Part p : s.getTopology().getPartBuffer()) {
@@ -55,9 +62,16 @@ public class Renderer {
                     int i1 = s.getTopology().getIndexBuffer().get(i * 3 + p.getIndex());
                     int i2 = s.getTopology().getIndexBuffer().get(i * 3 + p.getIndex() + 1);
                     int i3 = s.getTopology().getIndexBuffer().get(i * 3 + p.getIndex() + 2);
-                    drawTriangle(s.getGeometry().getVertecies().get(i1),
-                            s.getGeometry().getVertecies().get(i2),
-                            s.getGeometry().getVertecies().get(i3));
+                    drawTriangle(vertexes.get(i1),
+                            vertexes.get(i2),
+                            vertexes.get(i3));
+                }
+            }
+            if (p.getType() == TopologyType.LINES) {
+                for (int i = 0; i < p.getCount(); i++) {
+                    int i1 = s.getTopology().getIndexBuffer().get(i * 2 + p.getIndex());
+                    int i2 = s.getTopology().getIndexBuffer().get(i * 2 + p.getIndex() + 1);
+                    drawLine(vertexes.get(i1), vertexes.get(i2));
                 }
             }
         }
@@ -105,5 +119,9 @@ public class Renderer {
 //        }
 
 
+    }
+
+    private void drawLine(Vertex a, Vertex b){
+        raster.rasterizeLine(a, b);
     }
 }

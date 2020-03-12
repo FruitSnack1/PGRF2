@@ -40,12 +40,18 @@ public class VisibilityBuffer {
     public void drawPixelZ(double x, double y, double z, Col col){
         depth.getElement((int)x,(int)y).ifPresent(bufferZ ->{
 
-//            if(z > bufferZ)
-//                return;
+            if(z > bufferZ)
+                return;
 
             depth.setElement((int)x, (int)y, z);
             img.setElement((int)x, (int)y, new Color(col.getRGB()));
         });
+    }
+
+    public void drawLine(double x1, double y1,double x2,double y2, Col color){
+        Graphics gr = img.getBuffer().getGraphics();
+        gr.setColor(new Color(color.getRGB()));
+        gr.drawLine((int)x1,(int)y1,(int)x2,(int)y2);
     }
 
 }
