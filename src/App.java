@@ -90,13 +90,13 @@ public class App extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-        tetrahedron.setTransform(new Mat4Scale(.5));
+        tetrahedron.setTransform(new Mat4Scale(.5).mul(new Mat4Transl(0.1,0.1,0.1)));
         axis.setTransform(new Mat4Scale(.5));
         cube.setTransform(new Mat4Scale(.2).mul(new Mat4Transl(-.1,-.1,-.1)));
         solids.add(tetrahedron);
 //        solids.add(trinagle);
         solids.add(axis);
-        solids.add(cube);
+//        solids.add(cube);
 
         panel.repaint();
         initListeners();

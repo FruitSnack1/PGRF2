@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2a9829bd-1e37-4033-be6c-071c96413b44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/App$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/App$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/App$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/App$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/App$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/objects/TetraHedron.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/objects/TetraHedron.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/renderer/Rasterizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/renderer/Rasterizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/renderer/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/renderer/Renderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/TetraHedron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/TetraHedron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rasterOperation/ImageBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rasterOperation/ImageBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/Rasterizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Rasterizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Renderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +87,7 @@
       <workItem from="1583663864076" duration="10549000" />
       <workItem from="1583914887771" duration="8088000" />
       <workItem from="1583932542795" duration="1775000" />
-      <workItem from="1584008080522" duration="8213000" />
+      <workItem from="1584008080522" duration="8742000" />
     </task>
     <servers />
   </component>
@@ -121,22 +112,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2610" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582719770621" />
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1584017716747">
+    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1584018204958">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584017716747" />
-    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1584017716747">
+    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584018204958" />
+    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1584018204958">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584017716747" />
-    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1584017716746">
+    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584018204958" />
+    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1584018204958">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584017716746" />
-    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1584017716747">
+    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584018204958" />
+    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1584018204958">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584017716747" />
+    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584018204958" />
     <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1583926916449">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
