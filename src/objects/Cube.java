@@ -20,7 +20,12 @@ public class Cube extends Solid {
         getGeometry().getVertecies().add(new Vertex(new Point3D(1, 0, 1), new Col(255, 255, 255), 0, new Point2D()));
         getGeometry().getVertecies().add(new Vertex(new Point3D(1, 1, 1), new Col(255, 0, 255), 0, new Point2D()));
 
-        int[] indexes = {0, 1, 2, 1,2,3,2,3,6,3,6,7,1,3,5,3,5,7,0,2,4,2,4,6,4,6,7,4,5,7,0,1,4,1,4,5};
+        int[] indexes = {1, 0, 2, 1,2,3,
+                3,2,6,3,6,7,
+                5,1,3,5,3,7,
+                2,0,4,2,4,6,
+                4,6,7,4,5,7,
+                1,0,4,1,4,5};
         for (int i : indexes) {
             getTopology().getIndexBuffer().add(i);
         }

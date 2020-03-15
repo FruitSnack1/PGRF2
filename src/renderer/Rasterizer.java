@@ -20,7 +20,7 @@ public class Rasterizer {
         wired = !wired;
     }
 
-    public void rasterizeTriangle(Vertex a, Vertex b, Vertex c){
+    public void rasterizeTriangle(Vertex a, Vertex b, Vertex c, Col color){
 
         // sort Ay < By < Cy
         if(a.getPosition().getY() > b.getPosition().getY()){
@@ -53,6 +53,7 @@ public class Rasterizer {
         double xC = (c.getPosition().getX()+1) * (width/2.0)-1;
         double yC = (c.getPosition().getY()+1) * (height/2.0)-1;
 
+
         if (wired){
             vb.drawLine(xA, yA, xB, yB, new Col(255,255,255));
             vb.drawLine(xB, yB, xC, yC, new Col(255,255,255));
@@ -60,80 +61,52 @@ public class Rasterizer {
             return;
         }
 
-        if(xB > xA){
-            for (int y = (int)yA-1; y < yB; y++){
 
-                double t = (y-yA)/(yC - yA);
-                double x1 =xA*(1-t) + t*xC;
-                Vertex ab = a.mul(1-t).add(c.mul(t));
-                double t2 = (y-yA)/(yB - yA);
-                double x2 = xA*(1-t2) + t2*xB;
-                Vertex ac = a.mul(1-t2).add(b.mul(t2));
-
-                for (int x = (int) x1; x < x2; x++){
-                    double s = (x-x1)/(x2-x1);
-                    Vertex abc = ab.mul(1-s).add(ac.mul(s));
-
-                    double z = abc.getPosition().getZ();
-
-                    vb.drawPixelZ( x, y, z, sh.getColor(abc));
-                }
+        for (int y = (int)yA; y < yB; y++){
+            double t = Math.max(Math.min((y-yA)/(yC - yA),1),0);
+            double t2 = Math.max(Math.min((y-yA)/(yB - yA),1),0);
+            double x1 =xA*(1-t) + t*xC;
+            double x2 = xA*(1-t2) + t2*xB;
+            Vertex ab = a.mul(1-t).add(c.mul(t));
+            Vertex ac = a.mul(1-t2).add(b.mul(t2));
+            if(x1 > x2){
+                double tmp = x1;
+                x1 = x2;
+                x2 = tmp;
+                Vertex tmp2 = ab;
+                ab = ac;
+                ac = tmp2;
             }
+            for (int x = (int) x1; x < x2; x++){
+                double s = Math.max(Math.min((x-x1)/(x2-x1),1),0);
+                Vertex abc = ab.mul(1-s).add(ac.mul(s));
 
-            for (int y = (int)yB-1; y < yC; y++){
-                double t = (y-yC)/(yA - yC);
-                double x1 =xC*(1-t) + t*xA;
-                Vertex cb = c.mul(1-t).add(a.mul(t));
-                double t2 = (y-yC)/(yB - yC);
-                double x2 = xC*(1-t2) + t2*xB;
-                Vertex ca = c.mul(1-t2).add(b.mul(t2));
-
-                for (int x = (int) x1; x < x2; x++){
-
-                    double s = (x-x1)/(x2-x1);
-                    Vertex abc = cb.mul(1-s).add(ca.mul(s));
-                    double z = abc.getPosition().getZ();
-
-                    vb.drawPixelZ( x, y, z, sh.getColor(abc));
-                }
+                double z = abc.getPosition().getZ();
+                vb.drawPixelZ( x, y, z, color);
             }
-        }else{
-            for (int y = (int)yA-1; y < yB; y++){
+        }
+        for (int y = (int)yB; y < yC; y++){
+            double t = Math.max(Math.min((y-yC)/(yA - yC),1),0);
+            double t2 = Math.max(Math.min((y-yC)/(yB - yC),1),0);
 
-                double t = (y-yA)/(yB - yA);
-                double x1 =xA*(1-t) + t*xB;
-                Vertex ab = a.mul(1-t).add(b.mul(t));
-                double t2 = (y-yA)/(yC - yA);
-                double x2 = xA*(1-t2) + t2*xC;
-                Vertex ac = a.mul(1-t2).add(c.mul(t2));
+            double x1 =xC*(1-t) + t*xA;
+            double x2 = xC*(1-t2) + t2*xB;
 
-                for (int x = (int) x1; x < x2; x++){
-                    double s = (x-x1)/(x2-x1);
-                    Vertex abc = ab.mul(1-s).add(ac.mul(s));
-
-                    double z = abc.getPosition().getZ();
-
-                    vb.drawPixelZ( x, y, z, sh.getColor(abc));
-                }
+            Vertex cb = c.mul(1-t).add(a.mul(t));
+            Vertex ca = c.mul(1-t2).add(b.mul(t2));
+            if(x1 > x2){
+                double tmp = x1;
+                x1 = x2;
+                x2 = tmp;
+                Vertex tmp2 = cb;
+                cb = ca;
+                ca = tmp2;
             }
-
-            for (int y = (int)yB-1; y < yC; y++){
-                double t = (y-yC)/(yB - yC);
-                double x1 =xC*(1-t) + t*xB;
-                Vertex cb = c.mul(1-t).add(b.mul(t));
-                double t2 = (y-yC)/(yA - yC);
-                double x2 = xC*(1-t2) + t2*xA;
-                Vertex ca = c.mul(1-t2).add(a.mul(t2));
-
-                for (int x = (int) x1; x < x2; x++){
-
-                    double s = (x-x1)/(x2-x1);
-                    Vertex abc = cb.mul(1-s).add(ca.mul(s));
-
-                    double z = abc.getPosition().getZ();
-
-                    vb.drawPixelZ( x, y, z, sh.getColor(abc));
-                }
+            for (int x = (int) x1; x < x2; x++){
+                double s = Math.max(Math.min((x-x1)/(x2-x1),1),0);
+                Vertex abc = cb.mul(1-s).add(ca.mul(s));
+                double z = abc.getPosition().getZ();
+                vb.drawPixelZ( x, y, z, color);
             }
         }
     }
@@ -149,7 +122,7 @@ public class Rasterizer {
         double yA = (a.getPosition().getY()+1) * (height/2.0)-1;
         double xB = (b.getPosition().getX()+1) * (width/2.0)-1;
         double yB = (b.getPosition().getY()+1) * (height/2.0)-1;
+        vb.drawLine(xA,yA,xB,yB, a.getColor());
 
-        vb.drawLine(xA, yA, xB,yB, a.getColor());
     }
 }

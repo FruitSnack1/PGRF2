@@ -2,6 +2,7 @@ package rasterOperation;
 
 
 import transforms.Col;
+import transforms.Mat4;
 
 import java.awt.*;
 
@@ -38,6 +39,7 @@ public class VisibilityBuffer {
     }
 
     public void drawPixelZ(double x, double y, double z, Col col){
+
         depth.getElement((int)x,(int)y).ifPresent(bufferZ ->{
 
             if(z > bufferZ)

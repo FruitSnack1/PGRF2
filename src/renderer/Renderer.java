@@ -4,6 +4,7 @@ import model.Part;
 import model.Solid;
 import model.Vertex;
 import model.TopologyType;
+import transforms.Col;
 import transforms.Mat4;
 import transforms.Mat4Identity;
 import transforms.Mat4PerspRH;
@@ -64,7 +65,7 @@ public class Renderer {
                     int i3 = s.getTopology().getIndexBuffer().get(i * 3 + p.getIndex() + 2);
                     drawTriangle(vertexes.get(i1),
                             vertexes.get(i2),
-                            vertexes.get(i3));
+                            vertexes.get(i3), vertexes.get(i1).getColor());
                 }
             }
             if (p.getType() == TopologyType.LINES) {
@@ -79,8 +80,8 @@ public class Renderer {
 
     }
 
-    private void drawTriangle(Vertex a, Vertex b, Vertex c) {
-        raster.rasterizeTriangle(a,b,c);
+    private void drawTriangle(Vertex a, Vertex b, Vertex c, Col color) {
+        raster.rasterizeTriangle(a,b,c, color);
         //TODO RYCHLE OREZANI
         //SORT
 //        if (a.getPosition().getZ() < b.getPosition().getZ()) {

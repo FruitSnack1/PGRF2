@@ -3,10 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="2a9829bd-1e37-4033-be6c-071c96413b44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/App$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/App$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/App$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/App$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/objects/TetraHedron.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/objects/TetraHedron.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/objects/Triangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/objects/Triangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/rasterOperation/VisibilityBuffer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/rasterOperation/VisibilityBuffer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/renderer/Rasterizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/renderer/Rasterizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PartBuffer/renderer/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PartBuffer/renderer/Renderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Cube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/TetraHedron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/TetraHedron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rasterOperation/VisibilityBuffer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/Rasterizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Rasterizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Renderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +63,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -87,7 +99,10 @@
       <workItem from="1583663864076" duration="10549000" />
       <workItem from="1583914887771" duration="8088000" />
       <workItem from="1583932542795" duration="1775000" />
-      <workItem from="1584008080522" duration="8742000" />
+      <workItem from="1584008080522" duration="8780000" />
+      <workItem from="1584036575723" duration="1020000" />
+      <workItem from="1584092214703" duration="4275000" />
+      <workItem from="1584266638014" duration="9999000" />
     </task>
     <servers />
   </component>
@@ -112,41 +127,42 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2610" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582719770621" />
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1584018204958">
+    <state width="1877" height="349" key="GridCell.Tab.0.bottom" timestamp="1584278501369">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584018204958" />
-    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1584018204958">
+    <state width="1877" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584278501369" />
+    <state width="1877" height="349" key="GridCell.Tab.0.center" timestamp="1584278501369">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584018204958" />
-    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1584018204958">
+    <state width="1877" height="349" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584278501369" />
+    <state width="1877" height="349" key="GridCell.Tab.0.left" timestamp="1584278501369">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584018204958" />
-    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1584018204958">
+    <state width="1877" height="349" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584278501369" />
+    <state width="1877" height="349" key="GridCell.Tab.0.right" timestamp="1584278501369">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584018204958" />
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1583926916449">
+    <state width="1877" height="349" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584278501369" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1584098515565">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1583926916449" />
-    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1583926916449">
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584098515565" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1584098515565">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1583926916449" />
-    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1583926916449">
+    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584098515565" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1584098515565">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1583926916449" />
-    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1583926916449">
+    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584098515565" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1584098515565">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1583926916449" />
-    <state x="2360" y="114" key="SettingsEditor" timestamp="1582718551397">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584098515565" />
+    <state x="440" y="114" key="SettingsEditor" timestamp="1584273396692">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="440" y="114" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584273396692" />
     <state x="2360" y="114" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582718551397" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1584008387244">
       <screen x="0" y="0" width="1920" height="1080" />

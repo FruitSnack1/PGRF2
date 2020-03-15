@@ -90,13 +90,15 @@ public class App extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-        tetrahedron.setTransform(new Mat4Scale(.5).mul(new Mat4Transl(0.1,0.1,0.1)));
-        axis.setTransform(new Mat4Scale(.5));
-        cube.setTransform(new Mat4Scale(.2).mul(new Mat4Transl(-.1,-.1,-.1)));
+        tetrahedron.setTransform(new Mat4Scale(.5).mul(new Mat4Transl(0.2,0.2,0.2)));
+        axis.setTransform(new Mat4Scale(.2));
+        cube.setTransform(new Mat4Scale(.2).mul(new Mat4Transl(.1,.1,.1)));
+        trinagle.setTransform(new Mat4Scale(.5));
+        trinagle.setTransform(trinagle.getTransform().mul(new Mat4RotY(1.1)));
         solids.add(tetrahedron);
 //        solids.add(trinagle);
         solids.add(axis);
-//        solids.add(cube);
+        solids.add(cube);
 
         panel.repaint();
         initListeners();
@@ -142,6 +144,10 @@ public class App extends JFrame {
                     cam.addZenith(0.01);
                 if(e.getKeyCode() == KeyEvent.VK_B)
                     rasterizer.toggleWired();
+                if(e.getKeyCode() == KeyEvent.VK_L)
+                    trinagle.setTransform(trinagle.getTransform().mul(new Mat4RotX(.01)));
+                if(e.getKeyCode() == KeyEvent.VK_J)
+                    trinagle.setTransform(trinagle.getTransform().mul(new Mat4RotX(-.01)));
                 draw();
             }
         });
@@ -155,6 +161,7 @@ public class App extends JFrame {
             renderer.draw(solid);
         }
         panel.repaint();
+        img.getGraphics().drawString("WASD + mouse - movement, R-reset, B-wired/solid ", 5, img.getHeight() - 5);
     }
     public void clear(){
         Graphics gr = img.getGraphics();
