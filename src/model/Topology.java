@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Topology {
     protected ArrayList<Integer> indexBuffer = new ArrayList<>();
@@ -11,16 +10,8 @@ public class Topology {
         return indexBuffer;
     }
 
-    public void setIndexBuffer(ArrayList<Integer> indexBuffer) {
-        this.indexBuffer = indexBuffer;
-    }
-
     public ArrayList<Part> getPartBuffer() {
         return partBuffer;
     }
 
-
-    public void setPartBuffer(ArrayList<Part> partBuffer) {
-        this.partBuffer = partBuffer;
-    }
 }

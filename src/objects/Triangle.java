@@ -14,7 +14,6 @@ public class Triangle extends Solid {
         getGeometry().getVertecies().add(new Vertex(new Point3D(0,1,0), new Col(.5,.5,.5),1,new Point2D(1,1)));
         getGeometry().getVertecies().add(new Vertex(new Point3D(0,0,0), new Col(.2,.2,.2),1,new Point2D(1,1)));
 
-
         int[] indexes = {0,1,2};
         for(int i: indexes){
             getTopology().getIndexBuffer().add(i);

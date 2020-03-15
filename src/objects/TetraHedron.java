@@ -6,9 +6,6 @@ import model.TopologyType;
 import model.Vertex;
 import transforms.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TetraHedron extends Solid {
 
     public TetraHedron() {

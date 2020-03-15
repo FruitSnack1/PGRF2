@@ -1,6 +1,6 @@
 package model;
 
 public interface Vectorable<E> {
-    public Vertex mul(Double b);
-    public Vertex add(Vertex b);
+    Vertex mul(Double b);
+    Vertex add(Vertex b);
 }

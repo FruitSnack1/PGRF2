@@ -3,17 +3,12 @@ package renderer;
 import model.Vertex;
 import rasterOperation.VisibilityBuffer;
 import transforms.Col;
-import transforms.Point3D;
-
-import java.awt.*;
 
 public class Rasterizer {
     private final VisibilityBuffer vb;
-    private Shader sh;
-    private boolean wired = true;
-    public Rasterizer(VisibilityBuffer vb, Shader sh){
+    private boolean wired = false;
+    public Rasterizer(VisibilityBuffer vb){
         this.vb = vb;
-        this.sh =sh;
     }
 
     public void toggleWired(){
@@ -21,7 +16,6 @@ public class Rasterizer {
     }
 
     public void rasterizeTriangle(Vertex a, Vertex b, Vertex c, Col color){
-
         // sort Ay < By < Cy
         if(a.getPosition().getY() > b.getPosition().getY()){
             Vertex tmp = a;
@@ -53,14 +47,12 @@ public class Rasterizer {
         double xC = (c.getPosition().getX()+1) * (width/2.0)-1;
         double yC = (c.getPosition().getY()+1) * (height/2.0)-1;
 
-
         if (wired){
             vb.drawLine(xA, yA, xB, yB, new Col(255,255,255));
             vb.drawLine(xB, yB, xC, yC, new Col(255,255,255));
             vb.drawLine(xC, yC, xA, yA, new Col(255,255,255));
             return;
         }
-
 
         for (int y = (int)yA; y < yB; y++){
             double t = Math.max(Math.min((y-yA)/(yC - yA),1),0);
@@ -80,18 +72,16 @@ public class Rasterizer {
             for (int x = (int) x1; x < x2; x++){
                 double s = Math.max(Math.min((x-x1)/(x2-x1),1),0);
                 Vertex abc = ab.mul(1-s).add(ac.mul(s));
-
                 double z = abc.getPosition().getZ();
                 vb.drawPixelZ( x, y, z, color);
             }
         }
+
         for (int y = (int)yB; y < yC; y++){
             double t = Math.max(Math.min((y-yC)/(yA - yC),1),0);
             double t2 = Math.max(Math.min((y-yC)/(yB - yC),1),0);
-
             double x1 =xC*(1-t) + t*xA;
             double x2 = xC*(1-t2) + t2*xB;
-
             Vertex cb = c.mul(1-t).add(a.mul(t));
             Vertex ca = c.mul(1-t2).add(b.mul(t2));
             if(x1 > x2){
@@ -123,6 +113,5 @@ public class Rasterizer {
         double xB = (b.getPosition().getX()+1) * (width/2.0)-1;
         double yB = (b.getPosition().getY()+1) * (height/2.0)-1;
         vb.drawLine(xA,yA,xB,yB, a.getColor());
-
     }
 }

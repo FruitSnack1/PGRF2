@@ -31,19 +31,6 @@ public class Vertex implements Vectorable<Vertex> {
     public Point2D getTexture() {
         return texture;
     }
-//    public Vertex mul( Vertex b) {
-//        // CROSS PRODUCT
-//
-//        double cx = this.getPosition().getY() * b.getPosition().getZ() - this.getPosition().getZ() * b.getPosition().getY();
-//        double cy = this.getPosition().getZ() * b.getPosition().getX() - this.getPosition().getX() * b.getPosition().getZ();
-//        double cz = this.getPosition().getX() * b.getPosition().getY() - this.getPosition().getY() * b.getPosition().getX();
-//
-//        Col c = this.getColor().mul(b.getColor());
-//        Vec3D n = this.getNormal().mul(b.getNormal());
-//        double o = this.getOne()+ b.getOne();
-//
-//        return new Vertex(new Point3D(cx, cy, cz), c, n, o);
-//    }
 
     @Override
     public Vertex mul(Double b) {
@@ -58,24 +45,17 @@ public class Vertex implements Vectorable<Vertex> {
 
     @Override
     public Vertex add(Vertex b) {
-
         Point3D p = this.getPosition().add(b.getPosition());
         Vec3D n = this.getNormal().add(b.getNormal());
-//        Col c = this.getColor().add(b.getColor()).mul(0.5);
         Col c = this.getColor().add(b.getColor());
         double o = this.getOne() + b.getOne();
         Point2D t = this.getTexture().add(new Point2D(b.getPosition().getX(), b.getPosition().getY()));
-
         return new Vertex(p, c, n, o, t);
     }
 
 
     public Point3D getPosition() {
         return position;
-    }
-
-    public void setPosition(Point3D position){
-        this.position = position;
     }
 
     public Col getColor() {

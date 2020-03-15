@@ -28,7 +28,7 @@ public class DepthBuffer implements Raster<Double> {
     public void clear() {
         for (int x = 0; x < width;x++){
             for (int y = 0; y < height;y++){
-                array[x][y] = 1;
+                array[x][y] = Double.MAX_VALUE;
             }
         }
     }
@@ -46,7 +46,5 @@ public class DepthBuffer implements Raster<Double> {
             return Optional.empty();
         return Optional.of(array[x][y]);
     }
-
-    //TO DO
 
 }

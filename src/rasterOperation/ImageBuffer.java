@@ -35,10 +35,6 @@ public class ImageBuffer implements Raster<Color> {
         return buffer;
     }
 
-    public void setBuffer(BufferedImage buffer) {
-        this.buffer = buffer;
-    }
-
     @Override
     public Optional<Color> getElement(int x, int y) {
         if(inBounds(x,y)){

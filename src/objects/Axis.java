@@ -21,6 +21,5 @@ public class Axis extends Solid {
         }
 
         getTopology().getPartBuffer().add(new Part(TopologyType.LINES, 0, 3));
-        System.out.println(getGeometry().getVertecies());
     }
 }

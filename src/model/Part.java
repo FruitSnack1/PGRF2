@@ -19,10 +19,6 @@ public class Part {
         return type;
     }
 
-    public void setType(TopologyType t){
-        this.type = t;
-    }
-
     public int getCount() {
         return count;
     }

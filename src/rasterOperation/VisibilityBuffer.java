@@ -1,6 +1,5 @@
 package rasterOperation;
 
-
 import transforms.Col;
 import transforms.Mat4;
 
@@ -15,10 +14,6 @@ public class VisibilityBuffer {
         this.depth = new DepthBuffer(getWidth(), getHeight());
     }
 
-    public ImageBuffer getImg() {
-        return img;
-    }
-
     public int getHeight() {
         return img.getHeight();
     }
@@ -27,24 +22,14 @@ public class VisibilityBuffer {
         return img.getWidth();
     }
 
-
-
-
-    public void drawPixel(int x, int y, Col col){
-        img.setElement(x,y,Color.YELLOW);
-    }
-
     public void clearZ(){
         depth.clear();
     }
 
     public void drawPixelZ(double x, double y, double z, Col col){
-
         depth.getElement((int)x,(int)y).ifPresent(bufferZ ->{
-
             if(z > bufferZ)
                 return;
-
             depth.setElement((int)x, (int)y, z);
             img.setElement((int)x, (int)y, new Color(col.getRGB()));
         });
